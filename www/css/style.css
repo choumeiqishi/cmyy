@@ -1,0 +1,12 @@
+.list-item-date {  }
+
+.list-item-title { padding-left: 20px; }
+
+.list-item-value { float: right; }
+
+.creation-select { width: 65%; direction: ltr!important; padding-left: 10px!important; }
+
+.toggle-label-left { padding-right: 15px; font-size: 14px; }
+.toggle-label-right { padding-left: 15px; font-size: 14px; }
+
+#statPieContainer { background-color: #ccc; height: 370px; }

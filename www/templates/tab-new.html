@@ -1,0 +1,50 @@
+<ion-view view-title="记一条">
+    <ion-content>
+        <ion-list>
+            <label class="item item-input">
+                <span class="input-label">日期</span>
+                <input type="date" class="creation-input" ng-model="item.date">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">
+                    类别
+                </span>
+                <span class="toggle-label-left">支出</span>
+                <label class="toggle toggle-balanced">
+                    <input type="checkbox" ng-model="item.isIncome" ng-click="changeType()">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>                   
+                </label>
+                <span class="toggle-label-right">收入</span>
+            </label>
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    明细
+                </div>
+                <select class="creation-select" ng-model="item.subtype" convert-to-number>
+                    <option ng-repeat="option in subtypes" value="{{option.value}}">
+                        {{option.label}}
+                    </option>
+                </select>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">标题</span>
+                <input type="text" class="creation-input" ng-model="item.title" placeholder="干什么了...">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">金额</span>
+                <input type="number" class="creation-input" ng-model="item.value" placeholder="多少钱...">
+            </label>
+            <!--
+            <label class="item item-input">
+                <span class="input-label">备注</span>
+                <input type="text" class="creation-input" placeholder="随便写点什么...">
+            </label>
+            -->
+        </ion-list>
+        <div class="padding-top">
+            <button type="button" class="button button-full button-positive" ng-click="addItem()">保存</button>
+        </div>
+    </ion-content>
+</ion-view>
